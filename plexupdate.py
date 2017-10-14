@@ -21,8 +21,8 @@ fullLink = plex + linkVar + version
 if checkVersion == version:
 	print("Plex is up to date")
 else:	# Download the newest version and install
-	subprocess.run(["wget", fullLink, "-P", "/home/server/plexupdate/plexversion"])
-	subprocess.run(["sudo", "dpkg", "-i", "/home/server/plexupdate/plexversion/" + version])
+	subprocess.run(["wget", fullLink, "-P", "~/plexupdate/plexversion"])
+	subprocess.run(["sudo", "dpkg", "-i", "~/plexupdate/plexversion/" + version])
 	oke = input('do you want to reboot [Y/n]: ')
 	if oke == 'n':
 		print("Will be updated on reboot")
