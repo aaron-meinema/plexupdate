@@ -4,8 +4,7 @@ import subprocess
 
 
 #checks what is in plexversion this is used to check if we have the newest version
-checkVersion = subprocess.getoutput(["ls plexversion/"])
-print (checkVersion)
+checkVersion = subprocess.getoutput(["ls ~/plexupdate/plexversion/"])
 #used for the download this is variable changes
 linkVar = "1.9.4.4325-1bf240a65/"
 #plex is the website 
@@ -22,8 +21,8 @@ fullLink = plex + linkVar + version
 if checkVersion == version:
 	print("Plex is up to date")
 else:	# Download the newest version and install
-	subprocess.run(["wget", fullLink, "-P", "/home/server/Plex-folder/plexversion"])
-	subprocess.run(["sudo", "dpkg", "-i", "/home/server/Plex-folder/plexversion/" + version])
+	subprocess.run(["wget", fullLink, "-P", "/home/server/plexupdate/plexversion"])
+	subprocess.run(["sudo", "dpkg", "-i", "/home/server/plexupdate/plexversion/" + version])
 	oke = input('do you want to reboot [Y/n]: ')
 	if oke == 'n':
 		print("Will be updated on reboot")
