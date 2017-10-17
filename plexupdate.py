@@ -1,6 +1,8 @@
-#!/usr/bin/env python
+#!/usr/bin/python3.6
 
 import subprocess
+
+systemBit = subprocess.getoutput('uname -m')
 
 myHome = ("/home/" + subprocess.getoutput("whoami"))
 
@@ -11,10 +13,13 @@ linkVar = "1.9.4.4325-1bf240a65/"
 #plex is the website 
 plex = 'https://downloads.plex.tv/plex-media-server/'
 #version is the version needed for download
-version = 'plexmediaserver_1.9.4.4325-1bf240a65_i386.deb' 
+if systemBit == "x86_64":
+    version = 'plexmediaserver_1.9.4.4325-1bf240a65_amd64.deb'
+else:
+    version = 'plexmediaserver_1.9.4.4325-1bf240a65_i386.deb' 
+
 #full link is
 fullLink = plex + linkVar + version
-print (checkVersion)
 
 if checkVersion == version:
     print("Plex is up to date")
