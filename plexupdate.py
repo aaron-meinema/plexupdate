@@ -23,7 +23,7 @@ else:	# Download the newest version and install
     subprocess.run(["wget", fullLink, "-P", myHome + "/plexupdate/plexversion"])
     subprocess.run(["sudo", "dpkg", "-i", myHome + "/plexupdate/plexversion/" + version])
     oke = input('do you want to reboot [Y/n]: ')
-    if oke == 'n' || oke == 'N':
+    if oke == 'n' or oke == 'N':
         print("Will be updated on reboot")
     else:
         subprocess.run(["sudo", "reboot"])
