@@ -8,6 +8,13 @@ to your .bashrc
 
 clone in your home directory and keep original names for folders and files.
 
+Dependancies
+Python3.6
+
 # Usage
 
-plexupdate command will update to newest (now only works for i386 ubuntu).
+plexupdate command will update to newest and works for 32bit or 64bit ubuntu or debian.
+
+# Errors
+
+Might give errors if username and its home folder is not the same IE user = "Bennie" his home is /home/ben/. 
