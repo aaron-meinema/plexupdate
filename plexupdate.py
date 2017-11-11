@@ -15,9 +15,9 @@ linkVar = "1.9.4.4325-1bf240a65/"
 plex = 'https://downloads.plex.tv/plex-media-server/'
 #version is the version needed for download
 if systemBit == "x86_64":
-    version = 'https://plex.tv/downloads/latest/1?channel=16&build=linux-ubuntu-amd64&distro=ubuntu'
+    version = 'plexmediaserver_1.9.4.4325-1bf240a65_amd64.deb'
 else:
-    version = 'https://plex.tv/downloads/latest/1?channel=16&build=linux-ubuntu-i686&distro=ubuntu'
+    version = 'plexmediaserver_1.9.4.4325-1bf240a65_i386.deb'
 
 #full link is
 fullLink = plex + linkVar + version
